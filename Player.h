@@ -11,10 +11,10 @@ class Player {
     int maxHP;
     int HP;
     int coins;
-
 public:
     Player(const string &name, int maxHP = 100, int force = 5);
     void printInfo();
+    ~Player() = default;
 };
 
 #endif

@@ -1,7 +1,6 @@
 #include "Player.h"
 #include "utilities.h"
 Player::Player(const string& name, int maxHP, int force){
-    cout << "Player constructor called!!" << endl;
     this->name = name;
     this->maxHP = maxHP;
     this->HP = maxHP;

@@ -3,7 +3,6 @@
 
 using namespace std;
 int main(){
-    cout << "Hello World" << endl;
     Player player1("Player1");
     Player player2("Player2", 200, 10);
     Player player3("Player3", 300);

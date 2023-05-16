@@ -64,7 +64,7 @@ public:
     Card& operator=(const Card& other) = default;
 
 
-private:
+//private:
     CardType m_effect;
     CardStats m_stats;
 

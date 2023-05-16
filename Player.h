@@ -6,15 +6,15 @@ using namespace std;
 
 class Player {
 public:
-    string name;
-    int level;
-    int force;
-    int maxHP;
-    int HP;
-    int coins;
+    string m_name;
+    int m_level;
+    int m_force;
+    int m_maxHP;
+    int m_HP;
 
+    int m_coins;
     // public:
-    Player(const string &name, int maxHP = 100, int force = 5);
+    explicit Player(const string &name, int maxHP = 100, int force = 5);
     void printInfo();
     ~Player() = default;
     void levelUp();

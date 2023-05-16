@@ -13,4 +13,5 @@ add_executable(MTMCHKIN
         utilities.cpp
         utilities.h
         Player.h
-        Player.cpp)
+        Player.cpp
+        Card.cpp)

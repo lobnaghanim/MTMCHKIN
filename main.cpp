@@ -5,35 +5,19 @@
 
 using namespace std;
 int main(){
-    Player player1("Player1");
-    Player player2("Gandalf", 200, 5);
-    Player player3("Player3", 300);
+    Player player1("Ali", 100, 0);
+    player1.damage(31);
+    printf("initial state:\n");
+    player1.addCoins(20);
+    player1.printInfo();
+    printf("\n");
 
-    CardStats stats(3, 40, 10, 30, 1, 20);
-    Card card(CardType::Battle, stats);
 
+    CardStats stats(3, 4, 10, 2, 39, 20);
+    Card card(CardType::Buff, stats);
 
-//    player1.printInfo();
-//    player2.printInfo();
-//    player3.printInfo();
-//    printf("level up player 3\n");
-//    player3.levelUp();
-//    player3.levelUp();
-//
-//    player3.printInfo();
-//    cout << "player 3 level is " << player3.getLevel() << endl;
-//    printf("\n\n\n");
-//    player2.buff(5);
-//    player2.heal(100);
-//    player2.damage(201);
-//    player2.printInfo();
-//    printf("player2 is knocked out? %d\n", player2.isKnockedOut());
-//    printf("player3 is knocked out? %d\n", player3.isKnockedOut());
-//    player2.addCoins(690);
-//    player2.printInfo();
-//    printf("player one paid? %d\n", player1.pay(100));
-//    printf("player two paid? %d\n", player2.pay(100));
-//    printf("player two attack strength is %d\n", player2.getAttackStrength());
+    card.applyEncounter(player1);
+    player1.printInfo();
 
     cout << "---------------------------THE END---------------------------" << endl;
 }

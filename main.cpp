@@ -13,11 +13,12 @@ int main(){
     printf("\n");
 
 
-    CardStats stats(3, 4, 10, 2, 39, 20);
-    Card card(CardType::Buff, stats);
+    CardStats stats(3, 4, 10, 2, 39, 19);
+    Card card(CardType::Battle, stats);
 
     card.applyEncounter(player1);
     player1.printInfo();
+    card.printInfo();
 
     cout << "---------------------------THE END---------------------------" << endl;
 }

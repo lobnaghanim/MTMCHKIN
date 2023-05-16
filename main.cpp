@@ -10,6 +10,15 @@ int main(){
     player1.printInfo();
     player2.printInfo();
     player3.printInfo();
+    printf("level up player 3\n");
+    player3.levelUp();
+    player3.levelUp();
 
-
+    player3.printInfo();
+    cout << "player 3 level is " << player3.getLevel() << endl;
+    printf("\n\n\n");
+    player2.buff(59);
+    player2.heal(100);
+    player2.damage(201);
+    player2.printInfo();
 }

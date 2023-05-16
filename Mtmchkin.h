@@ -28,13 +28,14 @@ public:
      *      An instance of Mtmchkin
     */
     Mtmchkin(std::string playerName, const Card* cardsArray, int numOfCards){
-        player = Player(playerName);
+        m_player = Player(playerName);
         m_cardsArray = new Card[numOfCards];
         for (int i = 0; i < numOfCards; ++i) {
             m_cardsArray[i] = cardsArray[i];
         }
         m_numOfCards = numOfCards;
         m_gameStatus = GameStatus::MidGame;
+        m_currCard = 0;
     }
 
 
@@ -44,7 +45,15 @@ public:
      * @return
      *      void
     */
-    void playNextCard();
+    void playNextCard(){
+        m_currCard++;
+        if(m_currCard == m_numOfCards){
+            m_currCard = 0;
+        }
+        m_cardsArray[m_currCard].printInfo();
+        m_cardsArray[m_currCard].applyEncounter(m_player);
+        m_player.printInfo();
+    }
 
 
     /*
@@ -69,11 +78,11 @@ public:
 
 private:
     //TODO: complete the Mtmchkin class.
-    Player player;
+    Player m_player;
     Card *m_cardsArray;
     int m_numOfCards;
     GameStatus m_gameStatus;
-//    int m_currCard;
+    int m_currCard;
 };
 
 

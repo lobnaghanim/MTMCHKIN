@@ -2,21 +2,22 @@
 #define RACE_H
 #include <iostream>
 
-using namespace std;
+
 
 class Player {
-public:
-    string m_name;
+    std::string m_name;
     int m_level;
     int m_force;
     int m_maxHP;
     int m_HP;
-
     int m_coins;
+
+public:
     // public:
-    explicit Player(const string &name, int maxHP = 100, int force = 5);
+    explicit Player(const std::string &name, int maxHP = 100, int force = 5);
     void printInfo();
     ~Player() = default;
+    Player() = default;
     void levelUp();
     int getLevel() const;
     void buff(int f);

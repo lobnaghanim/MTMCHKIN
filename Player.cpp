@@ -1,6 +1,6 @@
 #include "Player.h"
 #include "utilities.h"
-Player::Player(const string& name, int maxHP, int force){
+Player::Player(const std::string& name, int maxHP, int force){
     this->m_name = name;
     this->m_maxHP = maxHP;
     this->m_HP = maxHP;
@@ -78,3 +78,4 @@ bool Player::pay(int amount) {
 int Player::getAttackStrength() const {
     return this->m_force + this->m_level;
 }
+

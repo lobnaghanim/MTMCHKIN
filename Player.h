@@ -22,6 +22,11 @@ public:
     void buff(int f);
     void heal(int hp);
     void damage(int dmg);
+    bool isKnockedOut() const;
+    void addCoins(int c);
+    bool pay(int amount);
+    int getAttackStrength() const;
+
 };
 
 #endif

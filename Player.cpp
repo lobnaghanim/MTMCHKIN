@@ -49,3 +49,32 @@ void Player::damage(int dmg) {
         this->HP -= dmg;
     }
 }
+
+bool Player::isKnockedOut() const {
+    if(this->HP == 0){
+        return true;
+    }
+    return false;
+}
+
+void Player::addCoins(int c){
+    if(c < 0){
+        return;
+    }
+    this->coins += c;
+}
+
+bool Player::pay(int amount) {
+    if(amount < 0){
+        return false;
+    }
+    if(this->coins - amount >= 0){
+        this->coins -= amount;
+        return true;
+    }
+    return false;
+}
+
+int Player::getAttackStrength() const {
+    return this->force + this->level;
+}

@@ -27,16 +27,8 @@ public:
      * @result
      *      An instance of Mtmchkin
     */
-    Mtmchkin(std::string playerName, const Card* cardsArray, int numOfCards){
-        m_player = Player(playerName);
-        m_cardsArray = new Card[numOfCards];
-        for (int i = 0; i < numOfCards; ++i) {
-            m_cardsArray[i] = cardsArray[i];
-        }
-        m_numOfCards = numOfCards;
-        m_gameStatus = GameStatus::MidGame;
-        m_currCard = 0;
-    }
+    Mtmchkin(const std::string& playerName, const Card* cardsArray, int numOfCards);
+
 
 
     /*
@@ -45,15 +37,8 @@ public:
      * @return
      *      void
     */
-    void playNextCard(){
-        m_currCard++;
-        if(m_currCard == m_numOfCards){
-            m_currCard = 0;
-        }
-        m_cardsArray[m_currCard].printInfo();
-        m_cardsArray[m_currCard].applyEncounter(m_player);
-        m_player.printInfo();
-    }
+    void playNextCard();
+
 
 
     /*

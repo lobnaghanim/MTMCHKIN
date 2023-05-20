@@ -13,6 +13,12 @@ int main(){
     cards[2] = Card(CardType::Battle, stats);
     cards[3] = Card(CardType::Heal, stats);
     Mtmchkin game("Daniel", cards, 4);
+    printf("initial state:\n");
+    while(!game.isOver()){
+        game.playNextCard();
+        printf("game status: %d\n\n", (int)game.getGameStatus());
+    }
+//    printf("game is over: %d\n", (int)game.isOver());
 
     //    Player player1("Ali", 100, 0);
 //    player1.damage(31);

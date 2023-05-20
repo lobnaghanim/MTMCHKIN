@@ -7,8 +7,9 @@ include_directories(.)
 
 add_executable(MTMCHKIN
         Card.h
-        main.cpp
+
         Mtmchkin.h
+        Mtmchkin.cpp
         test.cpp
         utilities.cpp
         utilities.h

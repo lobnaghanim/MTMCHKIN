@@ -30,6 +30,7 @@ bool Mtmchkin::isOver() const {
 
 GameStatus Mtmchkin::getGameStatus() const {
     if(m_player.isKnockedOut()){
+
         return GameStatus::Loss;
     }
     if(m_player.getLevel() == 10){

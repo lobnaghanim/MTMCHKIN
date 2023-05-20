@@ -12,8 +12,10 @@ void Card::applyEncounter(Player &player) const {
             if(player.getAttackStrength() >= this->m_stats.force){
                 player.levelUp();
                 player.addCoins(this->m_stats.loot);
+                printBattleResult(true);
             }else{
                 player.damage(this->m_stats.hpLossOnDefeat);
+                printBattleResult(false);
             }
             break;
         case CardType::Buff:

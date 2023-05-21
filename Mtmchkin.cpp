@@ -39,5 +39,8 @@ GameStatus Mtmchkin::getGameStatus() const {
     return GameStatus::MidGame;
 }
 
+Mtmchkin::~Mtmchkin() = default;
+
+
 
 

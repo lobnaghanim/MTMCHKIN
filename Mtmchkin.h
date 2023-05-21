@@ -61,6 +61,9 @@ public:
 
     //TODO: complete the Mtmchkin class.
 
+    // Destructor
+    ~Mtmchkin();
+
 private:
     //TODO: complete the Mtmchkin class.
     Player m_player;

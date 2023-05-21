@@ -39,7 +39,9 @@ GameStatus Mtmchkin::getGameStatus() const {
     return GameStatus::MidGame;
 }
 
-Mtmchkin::~Mtmchkin() = default;
+Mtmchkin::~Mtmchkin(){
+    delete[] m_cardsArray;
+}
 
 
 
